@@ -14,5 +14,6 @@ func main() {
 	})
 	e.GET("/view", controller.GetBooks)
 	e.POST("/addBook", controller.PostBook)
+	e.DELETE("/deleteBook/:id", controller.DeleteBook)
 	e.Logger.Fatal(e.Start(":3000"))
 }
